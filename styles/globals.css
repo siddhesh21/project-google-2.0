@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
+    .btn {
+        @apply bg-[#f8f9fa] p-3 rounded-md ring-gray-200 text-sm text-gray-800;
+    }
+    .btn:hover {
+        @apply ring-1;
+    }
+    .btn:focus {
+        @apply outline-none shadow-md;
+    }
+    .btn:active {
+        @apply ring-gray-300;
+    }
+    .link:hover {
+        @apply underline cursor-pointer;
+    }
+}
