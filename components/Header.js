@@ -2,6 +2,8 @@ import { MicrophoneIcon, SearchIcon, XIcon } from "@heroicons/react/solid";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useRef } from "react";
+import Avatar from "./Avatar";
+import HeaderOptions from "./HeaderOptions";
 
 function Header() {
   const router = useRouter();
@@ -41,11 +43,17 @@ function Header() {
          text-blue-500 border-l-2 pl-4 border-gray-300"
           />
           <SearchIcon className="h-6 text-blue-500 hidden sm:inline-flex" />
-          <button hidden type="submit">
+          <button hidden type="submit" onClick={search}>
             Search
           </button>
         </form>
+        <Avatar
+          className="ml-auto"
+          url="https://scontent-dub4-1.xx.fbcdn.net/v/t1.6435-9/135461166_858933254946649_8912077254214778819_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=FBzIs0ZO8x8AX89utGf&_nc_ht=scontent-dub4-1.xx&oh=8980e7b5e9f4deb97e5eeafb6f7ca1ef&oe=6098A37E"
+        />
       </div>
+      {/** HEADER OPTIONS */}
+      <HeaderOptions />
     </header>
   );
 }
