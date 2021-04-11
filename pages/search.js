@@ -27,7 +27,7 @@ export default Search;
 
 // SSR
 export async function getServerSideProps(context) {
-  const useDummyData = false;
+  const useDummyData = true;
   const startIndex = context.query.start || "0";
 
   const data = useDummyData
